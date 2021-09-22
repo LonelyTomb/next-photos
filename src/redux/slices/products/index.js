@@ -7,7 +7,8 @@ export const productSlice = createSlice({
     name: 'products',
     initialState: {
         loading: false,
-        products: []
+        products: [],
+        cart: []
     },
     reducers: {},
     extraReducers: {
