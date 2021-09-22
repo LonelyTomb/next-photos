@@ -1,6 +1,6 @@
-import 'tailwindcss/tailwind.css'
+import '@/styles/globals.css'
 import { Provider } from 'react-redux'
-import configureAppStore from '../src/redux/store';
+import configureAppStore from '@/redux/store';
 
 function MyApp({ Component, pageProps }) {
   const store = configureAppStore({});
