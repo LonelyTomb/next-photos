@@ -1,6 +1,8 @@
 import PublicLayout from '@/layouts/public'
 import Featured from '@/components/Featured'
 import Divider from '@/components/Divider'
+import Gallery from '@/components/Gallery'
+
 export default function Home() {
     return (
         <PublicLayout>
@@ -8,6 +10,7 @@ export default function Home() {
               <Divider />
               <Featured />
               <Divider />
+              <Gallery />
           </div>
         </PublicLayout>
     )
