@@ -17,11 +17,11 @@ const AppHeader = () => {
 
     return (<header className={'px-6 py-6 lg:px-2xl lg:py-xl flex justify-between items-center'}>
         <Image src={logo} className={'w-2 lg:w-xl'} alt={'app-logo'}/>
-        <button onClick={() => openCart()} className={'flex flex-col items-end'}>
+        <button onClick={() => openCart()} className={'flex flex-col items-end relative'}>
             <div className={'w-6 lg:w-xl h-6 lg:h-xl relative'}>
                 <Image src={shoppingCart} alt={'cart-image'} layout={'fill'}/>
             </div>
-            {items.length > 0 && (<div className={`${styles['cart-count']} relative`}>
+            {items.length > 0 && (<div className={`${styles['cart-count']} absolute`}>
                 <span className={'bg-black text-white p-1 text-md'}>{items.length}</span>
             </div>)}
 
