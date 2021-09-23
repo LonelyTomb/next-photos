@@ -8,7 +8,7 @@ const AppHeader = () => {
 
     const {cart} = useSelector((state) => state.products)
 
-    return (<header className={' px-6 py-6 lg:px-2xl lg:py-xl flex justify-between items-center'}>
+    return (<header className={'px-6 py-6 lg:px-2xl lg:py-xl flex justify-between items-center'}>
         <Image src={logo} className={'w-2 lg:w-xl'} alt={'app-logo'}/>
         <div className={'flex flex-col items-end'}>
             <div className={'w-6 lg:w-xl h-6 lg:h-xl relative'}>
