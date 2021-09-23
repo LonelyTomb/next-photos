@@ -14,6 +14,7 @@ module.exports = {
             white: '#FFFFFF',
             lightgray: '#E5E5E5',
             gray: '#656565',
+            grey: '#9B9B9B',
         },
         spacing: {
             px: '1px',
@@ -24,7 +25,8 @@ module.exports = {
             '5': '1.25rem',
             '6': '2rem',
             'xl': '3rem',
-            '2xl': '6rem'
+            '2xl': '5rem',
+            '3xl': '6rem'
         },
         borderWidth: {
             DEFAULT: '1px',
@@ -59,10 +61,10 @@ module.exports = {
             '1xl': '2rem',
         },
         fontWeight: {
-            normal: 'normal',
-            medium: '500',
-            semibold: '600',
-            bold: '700',
+            normal: 400,
+            medium: 500,
+            semibold: 600,
+            bold: 700,
         },
         fontFamily: {
             sans: ['Archivo', 'ui-sans-serif', 'system-ui'],
