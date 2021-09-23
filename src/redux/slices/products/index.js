@@ -9,7 +9,11 @@ export const productSlice = createSlice({
         loading: false,
         products: [],
     },
-    reducers: {},
+    reducers: {
+        saveProducts(state, action) {
+            state.products = [...action.payload]
+        }
+    },
     extraReducers: {
         [getProducts.pending]: (state) => {
             loadingState(state, true);
@@ -27,6 +31,6 @@ export const productSlice = createSlice({
     }
 })
 
-export const {} = productSlice.actions;
+export const {saveProducts} = productSlice.actions;
 
 export default productSlice.reducer;
