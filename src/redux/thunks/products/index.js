@@ -3,17 +3,18 @@ import {dbRef} from '@/api'
 import {onValue} from 'firebase/database'
 
 const getProducts = createAsyncThunk('product/getProducts', async (payload, {rejectWithValue}) => {
+    let products = []
     try {
-       const products =  onValue(dbRef('products/'), async (snapshot) => {
-           return await snapshot.val()
+        await onValue(dbRef('products/'), async (snapshot) => {
+            const res = await snapshot.val()
+            products = [...res]
         });
-       console.log(products)
-       return products
+        return products
     } catch (err) {
         return rejectWithValue(err.response.data);
     }
 })
 
-const ProductThunks = { getProducts }
+const ProductThunks = {getProducts}
 
 export default ProductThunks
