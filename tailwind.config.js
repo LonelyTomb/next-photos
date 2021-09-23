@@ -12,7 +12,8 @@ module.exports = {
             transparent: 'transparent',
             black: '#000000',
             white: '#FFFFFF',
-            text: '#E5E5E5'
+            lightgray: '#E5E5E5',
+            gray: '#656565',
         },
         spacing: {
             px: '1px',
@@ -20,10 +21,21 @@ module.exports = {
             '1': '0.25rem',
             '3': '0.75rem',
             '4': '1rem',
+            '5': '1.25rem',
             '6': '2rem',
             'xl': '3rem',
             '2xl': '6rem'
         },
+        borderWidth: {
+            DEFAULT: '1px',
+            '0': '0',
+            '2': '2px',
+            '3': '3px',
+            '4': '4px',
+        },
+        borderColor: theme => ({
+            ...theme('colors'),
+        }),
         backgroundColor: theme => ({
             ...theme('colors'),
         }),
@@ -54,6 +66,10 @@ module.exports = {
         },
         fontFamily: {
             sans: ['Archivo', 'ui-sans-serif', 'system-ui'],
+        },
+        letterSpacing: {
+            normal: '0',
+            wide: '0.07rem',
         },
         margin: (theme, {negative}) => ({
             auto: 'auto',
