@@ -28,7 +28,7 @@ const Featured = ({artwork}) => {
                     <p className={'font-bold text-md lg:text-lg mb-3'}><span className={'mr-1'}>About the</span><span>Samurai King Resting</span>
                     </p>
                     <p className={'text-gray font-bold text-md lg:text-lg'}>Pets</p>
-                    <p className={'text-gray leading-7 text-md lg:text-lg'}>
+                    <p className={'text-gray leading-7 text-md lg:text-lg font-normal'}>
                         So how did the classical Latin become so incoherent? According to McClintock, a 15th century
                         typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder text to
                         mockup various fonts for a type specimen book.So how did the classical Latin become so
