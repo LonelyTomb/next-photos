@@ -5,8 +5,8 @@ import Featured from '@/components/Featured'
 import Divider from '@/components/Divider'
 import Gallery from '@/components/Gallery'
 import CartBox from "@/components/Cart";
-import {onValue} from 'firebase/database'
-import {dbRef} from "@/api";
+import {get, child, ref} from 'firebase/database'
+import {database} from "@/api";
 import {saveProducts} from '@/redux/slices/products'
 
 export default function Home({products}) {
@@ -26,7 +26,7 @@ export default function Home({products}) {
                 <Divider/>
                 <Featured/>
                 <Divider/>
-                <Gallery />
+                <Gallery/>
             </div>
         </PublicLayout>
     )
@@ -35,10 +35,10 @@ export default function Home({products}) {
 export async function getStaticProps() {
     let products = []
     try {
-        await onValue(dbRef('products/'), async (snapshot) => {
+        await get(child(ref(database), 'products/')).then(async (snapshot) => {
             const res = await snapshot.val()
             products = [...res]
-        });
+        })
     } catch (e) {
         console.log(e)
     }
