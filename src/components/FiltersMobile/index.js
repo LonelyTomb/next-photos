@@ -29,8 +29,8 @@ const FiltersMobile = ({products, callback, picked, showFilter, setShowFilter, p
     }
 
 
-    const handlePriceChange = (e) => {
-        setPrice(e.target.value)
+    const handlePriceChange = (value) => {
+        setPrice(value)
     }
 
     const saveSelected = (categories, price) => {

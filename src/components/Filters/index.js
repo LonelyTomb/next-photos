@@ -19,9 +19,9 @@ const Filters = ({products, callback, picked, priceLimit, priceCallback}) => {
     const handleChange = (e) => {
         callback(e.target.value)
     }
-    const handlePriceChange = (e) => {
-        setPrice(e.target.value)
-        priceCallback(e.target.value)
+    const handlePriceChange = (value) => {
+        setPrice(value)
+        priceCallback(value)
     }
     return (
         <section className={'w-1/4 pr-6 hidden lg:block'}>
