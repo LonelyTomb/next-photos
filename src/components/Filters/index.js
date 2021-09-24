@@ -42,7 +42,7 @@ const Filters = ({products, callback, picked, priceLimit, priceCallback}) => {
                     }
                 </form>
             </div>
-            <hr style={{borderColor: '#C2C2C2'}} className={'border-t w-100 mb-6'}/>
+            <hr style={{borderColor: '#C2C2C2'}} className={'border-t w-100 mb-5'}/>
             <PriceRange price={price} priceRange={priceRange} handlePriceChange={handlePriceChange}/>
         </section>
     )
