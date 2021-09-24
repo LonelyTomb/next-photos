@@ -68,12 +68,11 @@ const Featured = () => {
                     </div>
                     <p className={'font-bold text-md lg:text-lg mb-3'}>Details</p>
                     <div>
-                        <p className={'text-gray leading-7 text-md'}>
-                            Size: 1020 x 1020 pixel
-                        </p>
-                        <p className={'text-gray leading-7 text-md'}>
-                            Size: 15 mb
-                        </p>
+                        {artwork.details && artwork.details.dimmensions && (
+                            <p className={'text-gray leading-7 text-md'}>
+                                Size: {artwork.details.dimmensions.width} x {artwork.details.dimmensions.height} pixel
+                            </p>)}
+
                     </div>
 
                 </div>
